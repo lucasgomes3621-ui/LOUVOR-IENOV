@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="soundGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <linearGradient id="plusGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  
+  <!-- Subtle circular pulse rings -->
+  <circle cx="256" cy="256" r="190" stroke="rgba(255,255,255,0.06)" stroke-width="2" fill="none" />
+  <circle cx="256" cy="256" r="140" stroke="rgba(255,255,255,0.08)" stroke-width="2" fill="none" />
+
+  <!-- Audio Waveform Bars that form a harmonic crest -->
+  <g fill="url(#soundGrad)" filter="url(#glow)">
+    <!-- Bar 1 -->
+    <rect x="100" y="220" width="24" height="72" rx="12" opacity="0.85" />
+    <!-- Bar 2 -->
+    <rect x="144" y="170" width="24" height="172" rx="12" opacity="0.9" />
+    <!-- Bar 3 -->
+    <rect x="188" y="120" width="24" height="272" rx="12" />
+    <!-- Center Bar 4 (Taller with subtle cross bar) -->
+    <rect x="232" y="90" width="28" height="332" rx="14" fill="#ffffff" />
+    <!-- Bar 5 -->
+    <rect x="280" y="140" width="24" height="232" rx="12" />
+    <!-- Bar 6 -->
+    <rect x="324" y="190" width="24" height="132" rx="12" opacity="0.9" />
+  </g>
+
+  <!-- LOUVOR+ Badge (+) in top right with warm glowing gradient -->
+  <g transform="translate(356, 120)" filter="url(#glow)">
+    <circle cx="24" cy="24" r="38" fill="url(#plusGrad)" />
+    <!-- Plus symbol -->
+    <path d="M 24 10 L 24 38 M 10 24 L 38 24" stroke="#ffffff" stroke-width="7" stroke-linecap="round" />
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "name": "LOUVOR+ — Gestão para Ministério de Louvor",
+  "description": "Sistema completo e mobile-first para gestão de ministérios de louvor: escalas, membros, repertórios, louvores, confirmações e disponibilidade.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
